@@ -10,12 +10,13 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-  },"scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server/index.js",
-    "client": "react-scripts start",
-    "install-all": "npm install"
   },
+    "scripts": {
+      "start": "concurrently \"npm run server\" \"npm run client\"",
+      "server": "cd server && npm start",
+      "client": "set PORT=3000 && react-scripts start",
+      "install-all": "npm install && cd server && npm install"
+    },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [

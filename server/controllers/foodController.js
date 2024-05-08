@@ -9,7 +9,14 @@ const fetchAllFoods = async (req, res) => {
 
     //2. Send the notes back as a response:
     res.json({foods: foods})
-}
+};
+
+// -----Get ALL Foods by Subtype e.g. Desserts, Entrees, etc. (GET):
+const fetchFoodsBySubtype = async (req, res) => {
+    const subtype = req.params.subtype; // Get the subtype from the request params
+    const foods = await Food.find({ subtype: subtype }); // Find foods with the specified subtype
+    res.json({ foods: foods }); // Send the foods back as a response
+};
 
 // -----Get A Food (GET):
 const fetchFood = async (req, res) => {
@@ -27,4 +34,5 @@ const fetchFood = async (req, res) => {
 module.exports = {
     fetchAllFoods,
     fetchFood,
+    fetchFoodsBySubtype,
 }

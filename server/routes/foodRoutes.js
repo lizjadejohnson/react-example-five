@@ -9,7 +9,12 @@ const router = express.Router();
 // -----Get ALL Foods (GET):
 router.get("/", foodController.fetchAllFoods)
 
+// -----Get ALL by specific subtype (GET):
+router.get("/subtype/:subtype", foodController.fetchFoodsBySubtype);
+
 // -----Get specific Food by ID (GET):
 router.get("/:id", foodController.fetchFood)
+
+
 
 module.exports = router;

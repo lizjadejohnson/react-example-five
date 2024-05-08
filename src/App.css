@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.menuContainer{
+  border: solid blue;
+}
+
+.sectionContainer{
+  border: solid red;
+}

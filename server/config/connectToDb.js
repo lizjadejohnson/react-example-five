@@ -1,5 +1,5 @@
 //Responsible for connecting the Mongoose DB to the Express Server Application
-require("dotenv").config()
+require("dotenv").config({ path: '../.env' });
 
 const mongoose = require("mongoose")
 
