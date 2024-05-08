@@ -1,6 +1,5 @@
 const Food = require('../models/Food')
 
-
 // -----Get ALL Foods (GET):
 const fetchAllFoods = async (req, res) => {
 

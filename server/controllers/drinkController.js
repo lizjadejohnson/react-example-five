@@ -10,6 +10,13 @@ const fetchAllDrinks = async (req, res) => {
     res.json({drinks: drinks})
 }
 
+// -----Get ALL Drinks by Subtype e.g. Alcoholic vs. Non-Alcoholic (GET):
+const fetchDrinksBySubtype = async (req, res) => {
+    const subtype = req.params.subtype; // Get the subtype from the request params
+    const drinks = await Drink.find({ subtype: subtype }); // Find drinks with the specified subtype
+    res.json({ drinks: drinks }); // Send the foods back as a response
+};
+
 // -----Get A Drink (GET):
 const fetchDrink = async (req, res) => {
 
@@ -26,4 +33,5 @@ const fetchDrink = async (req, res) => {
 module.exports = {
     fetchAllDrinks,
     fetchDrink,
+    fetchDrinksBySubtype,
 }

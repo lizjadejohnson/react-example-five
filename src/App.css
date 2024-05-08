@@ -45,3 +45,9 @@
 .sectionContainer{
   border: solid red;
 }
+
+.currentSelection {
+  z-index: 1000;
+  background-color: antiquewhite;
+
+}
